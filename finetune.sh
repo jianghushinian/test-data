@@ -9,7 +9,7 @@ MODEL_PATH="decapoda-research/llama-7b-hf"
 lora_checkpoint="./lora-Vicuna/checkpoint-11600"
 TEST_SIZE=200
 
-CUDA_VISIBLE_DEVICES=${TOT_CUDA} torchrun --nproc_per_node=$CUDA_NUM --master_port=$PORT finetune.py \
+CUDA_VISIBLE_DEVICES=${TOT_CUDA} torchrun --nproc_per_node=$CUDA_NUM --master_port=$PORT /kaggle/working/Chinese-Vicuna/finetune.py \
 --data_path $DATA_PATH \
 --output_path $OUTPUT_PATH \
 --model_path $MODEL_PATH \
