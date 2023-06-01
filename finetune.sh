@@ -7,7 +7,7 @@ DATA_PATH="/kaggle/working/test-data/couplet-10k.json" #"../dataset/instruction/
 OUTPUT_PATH="lora-Vicuna"
 MODEL_PATH="decapoda-research/llama-7b-hf"
 lora_checkpoint="./lora-Vicuna/checkpoint-11600"
-TEST_SIZE=200
+TEST_SIZE=2000
 
 CUDA_VISIBLE_DEVICES=${TOT_CUDA} torchrun --nproc_per_node=$CUDA_NUM --master_port=$PORT /kaggle/working/Chinese-Vicuna/finetune.py \
 --data_path $DATA_PATH \
